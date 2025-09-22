@@ -1,46 +1,11 @@
+/* CAROUSEL VERTICAL HEADER */
 
-.date{
- 
-    bottom: 10px;
-    margin-left: 15px;
-}
 
-.element{
-    color: green;
-}
-
-.elementButton{
-   background: green;
-}
-
-.slidePict{
-    height: 600px !important;
-}
-
-.slideCom{
-    height: 500px !important;
-}
-
-.recette1{
-    background-color: rgba(0, 0, 0, 0.3);
-    background: url("/images/bg-img/bg2.jpg") no-repeat center center / cover ;
-    
-}
-
-.recette2{
-     background-color: rgba(0, 0, 0, 0.3);
-    background: url("/images/bg-img/bg3.jpg") no-repeat center center / cover;
-    
-} 
-
-.cta{
-
-    background: url("/images/bg-img/bg4.jpg") no-repeat center center / cover ;
-}
-
-/* Force l’animation verticale */
 .carousel.carousel-vertical .carousel-inner {
-  height: 100%; /* Important */
+  height: 100%; 
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: gray;
 }
 
 .carousel.carousel-vertical .carousel-item {
@@ -57,7 +22,139 @@
   transform: translateY(-100%);
 }
 
+
+
+/* RESEAU SOCIAUX HEADER */
+
+.shareUp{
+  color: gray;
+}
+
 .contact{
     background: url("/images/bg-img/bg1.jpg") no-repeat center center / cover ;
    
+}
+
+
+
+/* SLIDER */
+.element{
+    color: green;
+}
+
+.elementButton{
+   background: green;
+}
+
+.slidePict{
+    height: 600px !important;
+}
+
+.slideCom{
+    height: 500px !important;
+}
+
+
+.carousel-indicators [data-bs-target]{
+  height: 30px;
+  background-color: transparent;
+  text-indent: -200px;
+  font-weight: bold;
+  font-size: 20px;
+  color: white;
+}
+
+.slidePict::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.6) 0%,
+        rgba(0, 0, 0, 0) 30%
+    ); 
+    z-index: 1; 
+}
+
+.carousel-indicators .active{
+  color: green;
+}
+
+.carousel-caption{
+  z-index: 3;
+}
+
+/* CARTE RECETTE */
+
+.recette1 {
+    background: url("/images/bg-img/bg2.jpg") no-repeat center center / cover;
+}
+
+.recette2 {
+    background: url("/images/bg-img/bg3.jpg") no-repeat center center / cover;
+}
+
+
+.recette-card {
+    min-height: 300px; 
+    overflow: hidden;
+}
+
+
+.recette-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); 
+    z-index: 1; 
+}
+
+.recette-card > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* CALL TO ACTION */
+
+.cta{
+
+    background: url("/images/bg-img/bg4.jpg") no-repeat center center / cover ;
+}
+
+/* FOOTER */
+
+.share-bottom{
+  color: grey;
+}
+
+.up {
+    display: none;
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: green;
+    color: white;
+    z-index: 100;
+    font-size: 24px;
+    text-decoration: none; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+    transition: opacity 0.3s; 
+}
+
+/* Affichage au scroll > 200px */
+.up.show {
+    display: flex;
+}
+
+.bi-quote{
+  color: green;
+  font-size: 2rem;
 }
